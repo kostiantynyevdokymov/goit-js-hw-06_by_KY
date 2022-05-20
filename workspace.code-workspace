@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../Jawa Scr/HW#1/src/css"
+	},
+	{
+		"path": "../Jawa Scr/HW#1/src/js"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "goit-js-hw-06_by_KY"
+  }
+}
