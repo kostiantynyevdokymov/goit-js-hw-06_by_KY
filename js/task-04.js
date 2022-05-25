@@ -18,3 +18,4 @@ const decrement = () => {
 };
 wrap_button.sub.addEventListener('click', increment);
 wrap_button.add.addEventListener('click', decrement);
+
