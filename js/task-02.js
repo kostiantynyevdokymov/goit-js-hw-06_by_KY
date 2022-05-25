@@ -21,7 +21,7 @@ listIngridients.appendChild(ul);
 for (let i = 0; i < ingredients.length; i += 1) {
 
   const li = document.createElement('li');
-  li.classList.add(`item`);
+  li.classList.add('item');
   ul.appendChild(li);
   li.innerHTML = li.innerHTML + ingredients[i]
 };
