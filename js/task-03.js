@@ -16,3 +16,13 @@ const images = [
 for (let el of images){
   document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}"></li>`)
 };
+
+// const list = document.querySelector(".gallery");
+
+// const galleryArr = images
+//   .map(
+//     ({ url, alt }) =>
+//       <li class = 'list__item'> <img class ='item__img' src = '${url}' alt = '${alt}'> </li> 
+//   )
+//   .join(" ");
+// list.insertAdjacentHTML("beforeend", galleryArr);
