@@ -14,12 +14,12 @@ function getAmount() {
   createBoxes(amount);
 }
 function createBoxes(amount) {
-  const basicSize = 0;
+  const basicSize = 30;
   const fragment = document.createDocumentFragment();
-  for (let index = 0; index < amount; index += 1) {
+  for (let index = 1; index <= amount; index += 1) {
     const elSize = basicSize + index * 10;
     const div = document.createElement("div");
-    div.style.cssText = `width: ${elSize}; height: ${elSize}; background-color: rgba( ${getRandomHexColor()}, ${getRandomHexColor()}, ${getRandomHexColor()})`;
+    div.style.cssText = `width: ${elSize}px; height: ${elSize}px; background-color: hsl(${getRandomHexColor()}, ${getRandomHexColor()}, ${getRandomHexColor()})`;
     fragment.appendChild(div);
   }
   boxes.appendChild(fragment);
@@ -28,30 +28,3 @@ function createBoxes(amount) {
 function destroyBoxes() {
   boxes.innerHTML = "";
 }
-
-// var render = document.querySelector('[data-action="create"]');
-// var destroy = document.querySelector('[data-action="destroy"]');
-// var boxes = document.getElementById('boxes');
-// render.addEventListener('click', getAmount);
-// destroy.addEventListener('click', destroyBoxes);
-
-// function getAmount() {
-//   var amount = +document.querySelector('#controls input').value;
-//   createBoxes(amount);
-// }
-
-// function createBoxes(amount) {
-//   var basicSize = 30;
-//   var fragment = document.createDocumentFragment();
-//   for (var i = 0; i < amount; i++) {
-//     var size = basicSize + i * 10;
-//     var div = document.createElement('div');
-//     div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${getRandomHexColor()}, ${getRandomHexColor()}, ${getRandomHexColor()} )`;
-//     fragment.appendChild(div);
-//   }
-//   boxes.appendChild(fragment);
-// }
-
-// function destroyBoxes() {
-//   boxes.innerHTML = '';
-// }

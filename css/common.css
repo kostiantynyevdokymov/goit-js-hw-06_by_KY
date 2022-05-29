@@ -8,7 +8,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: rgb(250, 250, 250);
   color: #212121;
   line-height: 1.5;
 }
@@ -34,16 +34,3 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2vw;
 }
-/* #validation-input.valid {
-  outline: 3px solid #4caf50;
-}
-
-#validation-input.invalid {
-  outline: 3px solid #f44336;
-}
-<input
-  type="text"
-  id="validation-input"
-  data-length="6"
-  placeholder="Введи 6 символов"
-/> */
