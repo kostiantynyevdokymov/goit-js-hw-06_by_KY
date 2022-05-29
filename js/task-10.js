@@ -10,7 +10,7 @@ create.addEventListener(`click`, getAmount);
 destroy.addEventListener(`click`, destroyBoxes);
 
 function getAmount() {
-  const amount = +document.querySelector("#controls input").value;
+  const amount = document.querySelector("#controls input").value;
   createBoxes(amount);
 }
 function createBoxes(amount) {
@@ -19,7 +19,7 @@ function createBoxes(amount) {
   for (let index = 1; index <= amount; index += 1) {
     const elSize = basicSize + index * 10;
     const div = document.createElement("div");
-    div.style.cssText = `width: ${elSize}px; height: ${elSize}px; background-color: hsl(${getRandomHexColor()}, ${getRandomHexColor()}, ${getRandomHexColor()})`;
+    div.style.cssText = `width: ${elSize}px; height: ${elSize}px; background-color: ${getRandomHexColor()}`;
     fragment.appendChild(div);
   }
   boxes.appendChild(fragment);
