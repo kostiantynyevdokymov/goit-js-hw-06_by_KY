@@ -13,16 +13,19 @@ const images = [
   },
 ];
 
-for (let el of images){
-  document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}"></li>`)
-};
+const galleryEl = document.querySelector(".gallery");
 
-// const list = document.querySelector(".gallery");
-
-// const galleryArr = images
-//   .map(
-//     ({ url, alt }) =>
-//       <li class = 'list__item'> <img class ='item__img' src = '${url}' alt = '${alt}'> </li> 
-//   )
-//   .join(" ");
-// list.insertAdjacentHTML("beforeend", galleryArr);
+galleryEl.style.display = "flex";
+galleryEl.style.listStyle = "none";
+galleryEl.style.justifyContent = "center";
+galleryEl.insertAdjacentHTML(
+  "beforeend",
+  images
+    .map(
+      (img) =>
+        `<li class ="gallery-item">
+      <img src = ${img.url} alt = "${img.alt}" width = "300">
+      </li>`
+    )
+    .join("")
+);

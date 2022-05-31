@@ -14,13 +14,21 @@ function getAmount() {
   createBoxes(amount);
 }
 function createBoxes(amount) {
-  const basicSize = 30;
+ 
   const fragment = document.createDocumentFragment();
+  
+  console.log(boxes);
+  const childrenNum = boxes.childNodes.length;
+  let width = 30 + 10 * childrenNum;
+  let height = 30 + 10 * childrenNum;
+
   for (let index = 1; index <= amount; index += 1) {
-    const elSize = basicSize + index * 10;
+
     const div = document.createElement("div");
-    div.style.cssText = `width: ${elSize}px; height: ${elSize}px; background-color: ${getRandomHexColor()}`;
+    div.style.cssText = `width: ${width}px; height: ${height}px; background-color: ${getRandomHexColor()}`;
     fragment.appendChild(div);
+    width += 10;
+    height += 10;
   }
   boxes.appendChild(fragment);
 }
